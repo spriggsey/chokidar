@@ -4,6 +4,7 @@ const fs = require('fs');
 const sysPath = require('path');
 const readdirp = require('readdirp');
 const anymatch = require('anymatch');
+const picomatch = require('picomatch');
 const globParent = require('glob-parent');
 const isGlob = require('is-glob');
 const braces = require('braces');
@@ -141,7 +142,7 @@ class WatchHelper {
     this.fullWatchPath = sysPath.resolve(watchPath);
     this.hasGlob = watchPath !== path;
     this.globSymlink = this.hasGlob && follow ? null : false;
-    this.globFilter = this.hasGlob ? anymatch(path) : false;
+    this.globFilter = this.hasGlob ? picomatch(path, { dot: true }) : false;
     this.dirParts = this.getDirParts(path);
     this.dirParts.forEach((parts) => {
       if (parts.length > 1) parts.pop();
