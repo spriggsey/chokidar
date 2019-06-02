@@ -1,8 +1,8 @@
-# Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar)
+# Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/@dsktschy/chokidar.svg)](https://github.com/dsktschy/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/@dsktschy/chokidar.svg)](https://github.com/dsktschy/chokidar)
 
 > A neat wrapper around node.js fs.watch / fs.watchFile / FSEvents.
 
-[![NPM](https://nodei.co/npm/chokidar.png)](https://www.npmjs.com/package/chokidar)
+[![NPM](https://nodei.co/npm/chokidar.png)](https://www.npmjs.com/package/@dsktschy/chokidar)
 
 ## Why?
 Node.js `fs.watch`:
@@ -52,13 +52,13 @@ more than needed.
 Install with npm:
 
 ```sh
-npm install chokidar
+npm install @dsktschy/chokidar
 ```
 
 Then `require` and use it in your code:
 
 ```javascript
-const chokidar = require('chokidar');
+const chokidar = require('@dsktschy/chokidar');
 
 // One-liner for current directory, ignores .dotfiles
 chokidar.watch('.', {ignored: /(^|[\/\\])\../}).on('all', (event, path) => {
